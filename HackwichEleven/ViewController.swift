@@ -11,7 +11,7 @@ class ViewController: UIViewController {
    
    
     @IBAction func myGuessButtonPressed(_ sender: Any) {
-        let message = " The value is: \(currentValue)" + "The valuse is: \(targetValue)"
+        let message = " The value is: \(currentValue) " + "\nThe Target value is: \(targetValue)"
         
     let alert = UIAlertController(title: "Hello World", message: message , preferredStyle:.alert)
                                
