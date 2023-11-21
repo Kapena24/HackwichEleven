@@ -11,7 +11,7 @@ class ViewController: UIViewController {
    
    
     @IBAction func myGuessButtonPressed(_ sender: Any) {
-        let message = " The value is \(currentValue)"
+        let message = " The value is: \(currentValue)" + "The valuse is: \(targetValue)"
         
     let alert = UIAlertController(title: "Hello World", message: message , preferredStyle:.alert)
                                
@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var slider: UISlider!
     var currentValue: Int = 0
+    var targetValue: Int = 0
     @IBAction func sliderHasMoved(_ sender: Any) {
        
         print("The Value of the slider is:\(slider.value)")
@@ -35,7 +36,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        currentValue = lroundf(slider.value)
+        targetValue = Int.random(in:0...100)
+
     }
 
 
