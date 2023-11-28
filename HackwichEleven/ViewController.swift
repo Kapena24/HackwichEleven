@@ -38,6 +38,8 @@ class ViewController: UIViewController {
         currentValue = lroundf(slider.value)
         targetValue = Int.random(in:0...100)
         startNewRound()
+        let thumbImageNormal = UIImage(named: "SliderThumb-Normal")
+        slider.setThumbImage(thumbImageNormal, for: .normal)
     }
     
     func startNewRound (){
